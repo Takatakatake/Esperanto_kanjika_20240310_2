@@ -58,17 +58,18 @@ st.image(image)
 ##動画も可能
 
 # ファイルアップローダーの作成
-replacements_txt = st.file_uploader("replacements.txtをここにドラッグ＆ドロップ、またはブラウズして選択してください")
+replacements_txt = st.file_uploader("replacements.txtをここにドラッグ＆ドロップ、またはブラウズして選択してください", type=['txt'])
 
 # ファイルがアップロードされた場合に処理
 if replacements_txt is not None:
     replacements=[]
-    with open(replacements_txt, 'r') as file:
-        for line in file:
-            line = line.strip()
-            j = line.split(',')
-            if len(j)==3:
-                replacements.append((j[0],j[1],j[2]))
+    # アップロードされたファイルをテキストとして読み込む
+    stringio = io.StringIO(replacements_txt.getvalue().decode("utf-8"))
+    for line in stringio:
+        line = line.strip()
+        j = line.split(',')
+        if len(j)==3:
+            replacements.append((j[0],j[1],j[2]))
     st.caption('requirements.txtの読み込みが完了しました。次はエスペラントの文章を入力してください。')
 
 with st.form(key='profile_form'):
