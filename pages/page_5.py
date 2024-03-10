@@ -30,7 +30,7 @@ with open('replacements.txt', 'r') as file:
         line = line.strip()
         j = line.split(',')
         if len(j)==3:
-            replacements.append(j[0],j[1],j[2])
+            replacements.append((j[0],j[1],j[2]))
             
     
 def safe_replace(text, replacements):
