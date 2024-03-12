@@ -108,7 +108,7 @@ with open('後から加える語根リスト(優先順位も決められる).txt
 #     prefix_3l_2[d1]=safe_replace(d2, replacements)
 #prefix_3l_2
                     
-prefix_2l_2={'ek': 'ek', 're': 're'}
+prefix_2l_2={' ek': ' ek', 're': 're'}##one space
 prefix_3l_2={'dis': '散(dis)','for': '离(for)','mal': '非(mal)'}
 suffix_2l_2={'as':'as', 'is':'is', 'os':'os', 'us':'us', 'um':'um','at':'at','it':'it','ot':'ot', 'ad':'ad','an':'an','ar':'ar','ec':'ec', 'eg':'eg',	'ej':'ej', 'em':'em', 'er':'er', 'et':'et', 'ig':'ig', 'il':'il', 'in':'in', 'uj':'uj', 'ul':'ul'}
 suffix_3l_2={'acx': '劣(acx)','ajx': '物(ajx)','ebl': '能(ebl)','end': '必(end)','estr': '长(estr)','igx': '成(igx)','ind': '价(ind)','ism': '义(ism)','ist': '家(ist)','ant': 'ant','int': 'int','ont': 'ont'}       
